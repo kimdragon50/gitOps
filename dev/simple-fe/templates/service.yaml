@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "simple-fe.labels" . }}-svc
+  name: {{ include "simple-fe.labels" . | nindent 4 }}-svc
   labels:
     {{- include "simple-fe.labels" . | nindent 4 }}
 spec:
