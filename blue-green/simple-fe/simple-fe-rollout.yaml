@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: simple-fe
-        image: asia.gcr.io/io203-101/simple-fe
+        image: saturn203/simple-fe
         ports:
         - name: http
           containerPort: 9001 
