@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-fe-svc
+  labels:
+    app: simple-fe
+spec:
+  selector:
+    app: simple-fe
+ 
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http
+  type: LoadBalancer

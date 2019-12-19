@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1 
+kind: Rollout 
+
+metadata:
+  name: simple-fe-rollout
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-fe
+  template:
+    metadata:
+      labels:
+        app: simple-fe
+    spec:
+      containers:
+      - name: simple-fe
+        image: asia.gcr.io/io203-101/simple-fe
+        ports:
+        - name: http
+          containerPort: 9001 
+  revisionHistoryLimit: 3
+  strategy:  
+    blueGreen: 
+      previewService: simple-fe-preview
+      activeService: simple-fe-svc 
+      autoPromotionEnabled: false # default true      
+      scaleDownDelaySeconds: 60
