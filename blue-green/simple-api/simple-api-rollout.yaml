@@ -30,3 +30,4 @@ spec:
       autoPromotionSeconds: 300
       scaleDownDelaySeconds: 180
       
+      
