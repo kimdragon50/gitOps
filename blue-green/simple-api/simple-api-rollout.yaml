@@ -24,7 +24,7 @@ spec:
   # ----- Everything above this comment are the same as a deployment -----
     blueGreen: # A new field for the Blue Green strategy options
       previewService: simple-api-preview # Reference to a service
-      # activeService: simple-api-svc # Reference to a service
+      activeService: simple-api-svc # Reference to a service
       autoPromotionEnabled: false # default true
       autoPromotionSeconds: 60  #autoPromotionEnabled true 이면 autoPromotionSeconds는 무시된다 
       scaleDownDelaySeconds: 60
