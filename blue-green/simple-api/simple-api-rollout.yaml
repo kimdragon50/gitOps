@@ -26,3 +26,5 @@ spec:
     blueGreen: # A new field for the Blue Green strategy options
       previewService: simple-api-preview # Reference to a service
       activeService: simple-api-svc # Reference to a service
+      scaleDownDelaySeconds: 180
+      
