@@ -15,6 +15,7 @@ spec:
       containers:
       - name: simple-api
         image: saturn203/simple-api
+        imagePullPolicy: Always
         ports:
         - name: http
           containerPort: 9001
