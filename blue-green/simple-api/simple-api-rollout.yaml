@@ -18,16 +18,15 @@ spec:
         image: saturn203/simple-api
         ports:
         - name: http
-          containerPort: 9001
-  minReadySeconds: 30
+          containerPort: 9001  
   revisionHistoryLimit: 3
   strategy:
   # ----- Everything above this comment are the same as a deployment -----
     blueGreen: # A new field for the Blue Green strategy options
       previewService: simple-api-preview # Reference to a service
-      activeService: simple-api-svc # Reference to a service
-      autoPromotionEnabled: false
-      autoPromotionSeconds: 300
-      scaleDownDelaySeconds: 180
-      
+      # activeService: simple-api-svc # Reference to a service
+      autoPromotionEnabled: false # default true
+      autoPromotionSeconds: 60  #autoPromotionEnabled true 이면 autoPromotionSeconds는 무시된다 
+      scaleDownDelaySeconds: 60
+
       
