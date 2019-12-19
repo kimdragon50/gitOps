@@ -27,14 +27,14 @@ spec:
     #  maxUnavailable: 0,
       steps:
       - setWeight: 10
-      # - pause:
-      #     duration: 10 # 60 seconds
-      # - setWeight: 50
-      # - pause:
-      #     duration: 10 # 60 seconds
-      # - setWeight: 70
-      # - pause:
-      #     duration: 10 # 60 seconds
-      - pause: {}
+      - pause:
+          duration: 10 # 60 seconds
+      - setWeight: 50
+      - pause:
+          duration: 10 # 60 seconds
+      - setWeight: 70
+      - pause:
+          duration: 10 # 60 seconds
+      # - pause: {}
     #  - setWeight: 20
     #  - pause: {}
