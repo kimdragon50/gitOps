@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1 
+kind: Rollout 
+metadata:
+  name: simple-api-rollout
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: simple-api
+  template:
+    metadata:
+      labels:
+        app: simple-api
+    spec:
+      containers:
+      - name: simple-api
+        image: saturn203/simple-api
+        ports:
+        - name: http
+        - containerPort: 9001
+  minReadySeconds: 30
+  revisionHistoryLimit: 3
+  strategy:  
+    canary: 
+    #  maxSurge: "25%"
+    #  maxUnavailable: 0,
+      steps:
+      - setWeight: 10
+      # - pause:
+      #     duration: 10 # 60 seconds
+      # - setWeight: 50
+      # - pause:
+      #     duration: 10 # 60 seconds
+      # - setWeight: 70
+      # - pause:
+      #     duration: 10 # 60 seconds
+      - pause: {}
+    #  - setWeight: 20
+    #  - pause: {}

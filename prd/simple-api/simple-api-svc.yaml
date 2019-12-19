@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-api-svc
+  labels:
+    app: simple-api
+spec:
+  selector:
+    app: simple-api
+ 
+  ports:
+  - protocol: TCP
+    port: 9001
+    targetPort: http
