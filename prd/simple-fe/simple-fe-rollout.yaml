@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1 
+kind: Rollout 
+
+metadata:
+  name: simple-fe-rollout
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-fe
+  template:
+    metadata:
+      labels:
+        app: simple-fe
+    spec:
+      containers:
+      - name: simple-fe
+        image: saturn203/simple-api
+        ports:
+        - name: http
+          containerPort: 9001
+  minReadySeconds: 30
+  revisionHistoryLimit: 3
+  strategy:  
+    canary: 
+      steps:
+      - setWeight: 20
+      - pause: {}
