@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1 # Changed from apps/v1
+kind: Rollout # Changed from Deployment
+# ----- Everything below this comment is the same as a deployment -----
+metadata:
+  name: simple-api-rollout
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-api
+  template:
+    metadata:
+      labels:
+        app: simple-api
+    spec:
+      containers:
+      - name: simple-api
+        image: saturn203/simple-api
+        ports:
+        - name: http
+          containerPort: 9001
+  minReadySeconds: 30
+  revisionHistoryLimit: 3
+  strategy:
+  # ----- Everything above this comment are the same as a deployment -----
+    blueGreen: # A new field for the Blue Green strategy options
+      previewService: simple-api-preview # Reference to a service
+      activeService: simple-api-svc # Reference to a service
