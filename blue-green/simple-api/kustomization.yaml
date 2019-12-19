@@ -8,4 +8,4 @@ resources:
 
 images:
 - name: saturn203/simple-api
-  newTag: "v3.1.20"
+  newTag: "v3.1.21"
