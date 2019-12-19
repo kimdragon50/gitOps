@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: simple-api-rollout
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: simple-api
@@ -35,6 +35,6 @@ spec:
       - setWeight: 70
       - pause:
           duration: 10 # 60 seconds
-      # - pause: {}
+      - pause: {}
     #  - setWeight: 20
     #  - pause: {}
