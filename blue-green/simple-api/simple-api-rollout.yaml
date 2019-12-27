@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: simple-api
-        image: saturn203/simple-api
+        image: kimyongman1/simple-api
         ports:
         - name: http
           containerPort: 9001  

@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: saturn203/simple-fe
+  repository: kimyongman1/simple-fe
   pullPolicy: Always
   containerPort: 9001
 

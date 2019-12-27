@@ -7,5 +7,5 @@ resources:
 - simple-api-svc-preview.yaml
 
 images:
-- name: saturn203/simple-api
+- name: kimyongman1/simple-api
   newTag: "v3.1.14"

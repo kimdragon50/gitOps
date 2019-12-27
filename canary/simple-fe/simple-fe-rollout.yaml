@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: simple-fe
-        image: saturn203/simple-fe
+        image: kimyongman1/simple-fe
         ports:
         - name: http
           containerPort: 9001

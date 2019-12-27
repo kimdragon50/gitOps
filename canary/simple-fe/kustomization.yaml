@@ -7,5 +7,5 @@ resources:
 
 
 images:
-- name: saturn203/simple-fe
+- name: kimyongman1/simple-fe
   newTag: "v3.1.0"
