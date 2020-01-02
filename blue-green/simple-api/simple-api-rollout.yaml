@@ -27,5 +27,5 @@ spec:
       activeService: simple-api-svc # Reference to a service
       autoPromotionEnabled: false # default true      
       scaleDownDelaySeconds: 60
-
+      #test 11
       
