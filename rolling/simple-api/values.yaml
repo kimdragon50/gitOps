@@ -5,7 +5,7 @@
 replicaCount: 4
 
 image:
-  repository: kimyongman1/simple-api
+  repository: yongman50/simple-api
   pullPolicy: Always
   containerPort: 9001
 

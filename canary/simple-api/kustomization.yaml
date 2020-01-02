@@ -6,5 +6,5 @@ resources:
 - simple-api-svc.yaml
 
 images:
-- name: kimyongman1/simple-api
+- name: yongman50/simple-api
   newTag: "v3.1.13"

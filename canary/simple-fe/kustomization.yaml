@@ -7,5 +7,5 @@ resources:
 
 
 images:
-- name: kimyongman1/simple-fe
+- name: yongman50/simple-fe
   newTag: "v3.1.0"
